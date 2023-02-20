@@ -1,0 +1,82 @@
+h1,
+h2,
+h3 {
+  opacity: 87%;
+}
+
+p {
+  opacity: 60%;
+}
+
+section {
+  h2 {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  h2 + p {
+    text-align: left;
+    font-size: 1.05rem;
+  }
+}
+
+#welcome-section {
+  h1 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+#projects {
+  .project-desc {
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+  }
+}
+
+.social__link {
+  span,
+  a {
+    font-size: 1.05rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  section {
+    h2 + p {
+      font-size: 1rem;
+    }
+  }
+
+  #welcome-section {
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.15rem;
+    }
+  }
+
+  #projects {
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .social__link {
+    span,
+    a {
+      font-size: 1rem;
+    }
+  }
+}

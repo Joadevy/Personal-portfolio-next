@@ -1,13 +1,25 @@
 import Image from "next/image";
+import { Roboto_Slab } from "@next/font/google";
+import { Rubik } from "@next/font/google";
+
 import { Inter } from "@next/font/google";
+
 import styles from "../../styles/page.module.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+const rubik = Rubik({
+  // weight: ["400", "500", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
+    <main className={rubik.className}>
+      <h2 className={rubik.className}>Hey! I'm Joaquín Arlettaz</h2>
+      <h2>Hey! I'm Joaquin Arlettaz</h2>
+      <h2 className={rubik.className}>Hey! I'm Joaquín Arlettaz</h2>
+
+      {/* <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
@@ -85,7 +97,7 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
+      </div> */}
     </main>
   );
 }
