@@ -48,10 +48,10 @@ export default function Head() {
       <meta property="og:url" content="https://www.joaquinarlettaz.tech/" />
       <meta property="og:type" content="website" />
       <link
-        rel="icon"
+        rel="shortcut icon"
         type="image/png"
         sizes="32x32"
-        href="src/assets/icons/favicon.webp"
+        href="./icons/favicon.webp"
       />
     </>
   );

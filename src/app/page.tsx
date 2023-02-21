@@ -1,103 +1,80 @@
 import Image from "next/image";
-import { Roboto_Slab } from "@next/font/google";
 import { Rubik } from "@next/font/google";
 
-import { Inter } from "@next/font/google";
-
-import styles from "../../styles/page.module.scss";
+import styles from "../../styles/home.module.scss";
+import Nav from "../components/Nav/Nav";
+import Project from "@/components/ Project/Project";
 
 const rubik = Rubik({
-  // weight: ["400", "500", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
 });
 
 export default function Home() {
   return (
-    <main className={rubik.className}>
-      <h2 className={rubik.className}>Hey! I'm Joaquín Arlettaz</h2>
-      <h2>Hey! I'm Joaquin Arlettaz</h2>
-      <h2 className={rubik.className}>Hey! I'm Joaquín Arlettaz</h2>
-
-      {/* <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
+    <div className={rubik.className}>
+      <Nav />
+      <main className={styles.main}>
+        <section className={styles.welcomeSection} id="welcome-section">
+          <div className={styles["img-container"]}></div>
+          <h1>Hey! I&apos;m Joaquín Arlettaz</h1>
+          <p>
+            An Information Systems Engineering Student passionate about
+            technology and teamwork. I&apos;m currently learning web
+            technologies to become a better IT professional. You can see my way
+            to achieve this goal in{" "}
+            <a data-content="my completed projects" href="#projects">
+              my completed projects
+            </a>
           </p>
-        </a>
+        </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
+        <section id="projects" className={styles.projects}>
+          <h2>Projects</h2>
+          <p>These are some of my projects:</p>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div> */}
-    </main>
+          <Project
+            title="To-do por hacer"
+            desc="A to-do list app with some extra features."
+            webUrl="https://joadevy.github.io/todo-por-hacer/"
+            repoUrl="https://github.com/Joadevy/todo-por-hacer"
+            img="/icons/todo.webp"
+          />
+
+          <Project
+            title="Trader or Not?"
+            desc="Higher or lower game with cryptocurrency prices."
+            webUrl="https://joadevy.github.io/TraderOrNot/"
+            repoUrl="https://github.com/Joadevy/TraderOrNot"
+            img="/icons/bitcoin.webp"
+          />
+
+          <Project
+            title="Crowdfunding landing page"
+            desc="Interface for an app to collect funds for a project."
+            webUrl="https://crowdfunding-product-page-joadevy.vercel.app/"
+            repoUrl="https://github.com/Joadevy/crowdfunding-product-page"
+            img="/icons/landing.webp"
+          />
+
+          <Project
+            title="Tic Tac Toe"
+            desc="The traditional three-in-line game on the web."
+            webUrl="https://joadevy.github.io/Tic-Tac-Toe/"
+            repoUrl="https://github.com/Joadevy/Tic-Tac-Toe"
+            img="/icons/tictactoe.webp"
+          />
+
+          <Project
+            title="E-commerce product page"
+            desc="UI for e-commerce with built-in cart features."
+            webUrl="https://joadevy.github.io/FM-Ecommerce-ProductPage/"
+            repoUrl="https://github.com/Joadevy/FM-Ecommerce-ProductPage"
+            img="/icons/product.webp"
+          />
+        </section>
+      </main>
+      {/* <h2 id={styles["titulo"]}>Hey! Im Joaquin Arlettaz</h2> */}
+    </div>
   );
 }

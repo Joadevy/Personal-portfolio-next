@@ -1,0 +1,95 @@
+.main {
+  padding: 0 1rem;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    border-bottom: 0.5px solid var(--gray-border);
+    padding-bottom: 5rem;
+
+    h2 + p {
+      margin-top: 0.25rem;
+    }
+  }
+
+  .welcomeSection {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    border-bottom: none;
+
+    div {
+      background-image: url(/photos/profile-static.webp);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 300px;
+      width: 300px;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: var(--violet);
+      text-decoration: none;
+      scroll-behavior: smooth;
+      display: inline-block;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: attr(data-content); /* Prints the value of the attribute */
+        top: 0;
+        left: 0;
+        color: var(--cyan);
+        overflow: hidden;
+        transition: width 275ms ease;
+        width: 0;
+        white-space: nowrap;
+      }
+
+      &:hover::before {
+        width: 100%;
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-style: wavy;
+      }
+    }
+  }
+
+  .projects {
+    h2 + p {
+      margin-top: 0.25rem;
+      margin-bottom: 1.25rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main {
+    padding: 0 17.5rem;
+
+    .welcomeSection {
+      div {
+        height: 450px;
+        width: 450px;
+        transition: background-image 0.5s;
+        margin-bottom: 0rem;
+
+        &:hover {
+          background-image: url(/photos/profile-hover.webp);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .main {
+    .welcomeSection {
+      div {
+        width: 200px;
+      }
+    }
+  }
+}
