@@ -5,6 +5,7 @@ import styles from "../../styles/home.module.scss";
 import Nav from "../components/Nav/Nav";
 import Project from "@/components/Project/Project";
 import SocialLink from "@/components/SocialLink/SocialLink";
+import Chat from "@/components/Chat/Chat";
 
 const rubik = Rubik({
   style: ["normal", "italic"],
@@ -22,12 +23,26 @@ export default function Home() {
           <p>
             An Information Systems Engineering Student passionate about
             technology and teamwork. I&apos;m currently learning web
-            technologies to become a better IT professional. You can see my way
-            to achieve this goal in{" "}
+            technologies to become a better IT professional. You can{" "}
+            <a data-content="know more about me" href="#knowMore">
+              know more about me
+            </a>{" "}
+            or see my way to achieve my goal in{" "}
             <a data-content="my completed projects" href="#projects">
               my completed projects
             </a>
+            .
           </p>
+        </section>
+
+        <section id="knowMore" className={styles.projects}>
+          <h2>Know something more</h2>
+          <p>
+            Chat with me (or maybe not really me? Who knows...) and get more
+            details:
+          </p>
+
+          <Chat></Chat>
         </section>
 
         <section id="projects" className={styles.projects}>

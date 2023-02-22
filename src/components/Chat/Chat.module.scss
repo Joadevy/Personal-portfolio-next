@@ -1,0 +1,103 @@
+.chatContainer {
+  min-width: 500px;
+  max-width: 900px;
+  border: 1px solid var(--gray-border);
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 1rem;
+  position: relative;
+  margin: auto;
+}
+
+.messagesContainer {
+  padding: 1px 5px 1px 5px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid green;
+}
+
+@media only screen and (max-width: 400px) {
+  .chatContainer {
+    min-width: 300px;
+    max-width: 385px;
+  }
+}
+
+.bot-msg,
+.user-msg {
+  padding: 1rem;
+  border-radius: 1.25rem;
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  color: var(--text-color);
+}
+
+.bot-msg {
+  border: 1px solid var(--cyan);
+  align-self: start;
+  border-bottom-left-radius: 0px;
+}
+
+.user-msg {
+  border: 1px solid var(--violet);
+  align-self: end;
+  border-bottom-right-radius: 0px;
+}
+
+.inputsForm {
+  margin-top: 1rem;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  gap: 1px;
+  width: 95%;
+}
+
+.inputChat {
+  width: 89%;
+  border: none;
+  border: 1px solid var(--gray-border);
+  border-radius: 5px;
+  padding: 8px;
+  outline: none;
+}
+
+.inputChat:focus {
+  border: 1px solid whitesmoke;
+}
+
+.inputSubmit {
+  width: 10%;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid var(--gray-border);
+  padding: 8px;
+  color: var(--violet);
+}
+
+.inputLoading {
+  width: 10%;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid var(--gray-border);
+  padding: 8px;
+  color: var(--violet);
+  opacity: 70%;
+}
+
+.inputSubmit:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
