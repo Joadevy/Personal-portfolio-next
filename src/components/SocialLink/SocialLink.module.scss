@@ -1,0 +1,35 @@
+.social__link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.55rem;
+
+  span {
+    opacity: 75%;
+    margin-right: 0.5rem;
+  }
+
+  a {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: -0.25rem;
+    text-decoration: none;
+    color: var(--cyan);
+
+    &::before {
+      position: absolute;
+      content: attr(data-content);
+      top: 0;
+      left: 0;
+      color: var(--violet);
+      overflow: hidden;
+      transition: width 275ms ease;
+      width: 0;
+      white-space: nowrap;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+}

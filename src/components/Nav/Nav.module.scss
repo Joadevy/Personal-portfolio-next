@@ -1,7 +1,7 @@
 .navbar {
   border-radius: 5px;
   border: 0.5px solid var(--violet);
-  background-color: var(--dark-theme);
+  background-color: var(--dark-theme-soft);
   position: fixed;
   display: flex;
   left: 0;
@@ -67,8 +67,7 @@
 
 @media only screen and (min-width: 1024px) {
   .navbar {
-    // background-color: var(--dark-theme-soft);
-    // background-color: red;
+    background-color: var(--dark-theme-soft);
     z-index: 10;
     margin-left: 0.25rem;
     width: 15%;
@@ -84,11 +83,13 @@
     }
 
     .nav__menu {
+      background-color: var(--dark-theme-soft);
       align-items: center;
       flex-direction: row;
       flex-wrap: wrap;
       margin-right: -0.5rem;
       li {
+        background-color: var(--dark-theme-soft);
         display: block;
         margin-bottom: 0rem;
 

@@ -63,6 +63,20 @@
       margin-bottom: 1.25rem;
     }
   }
+
+  .linksContainer {
+    margin-top: 1rem;
+    list-style-type: none;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    svg {
+      width: 1.5rem;
+      fill: var(--text-color);
+      margin-right: 0.5rem;
+    }
+  }
 }
 
 @media only screen and (min-width: 1024px) {
