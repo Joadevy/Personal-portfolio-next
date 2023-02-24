@@ -3,8 +3,9 @@
 import { getGreeting, getPrediction } from "helpers/helpers";
 import { useEffect, useRef, useState } from "react";
 import styles from "./Chat.module.scss";
+import Message from "./Message/Message";
 
-type Message = {
+export type TMessage = {
   id: string;
   from: "user" | "bot";
   text: string;
@@ -116,6 +117,12 @@ const EXAMPLES: Example[] = [
   { text: "let's talk in english", label: "changeLenguage" },
 ];
 
+const toggleActiveMessage = () => {
+  setTimeout(() => {
+    return styles[`messageActive`];
+  }, 150);
+};
+
 type Answer = {
   presentacion: string;
   changeLenguage: string;
@@ -129,12 +136,12 @@ type Answer = {
 };
 
 const ANSWERS_SPANISH: Answer = {
-  presentacion: `Hola, soy Joaquin Arlettaz, espero estes teniendo un gran dia. Podes preguntarme lo que quieras acerca de mi e intentare responderte.`,
+  presentacion: `Hola, soy Joaquin Arlettaz 🙂, espero estes teniendo un gran dia. Podes preguntarme lo que quieras acerca de mi e intentare responderte.`,
   ocupacion: `Actualmente soy estudiante de ingenieria en sistemas. Estoy constantemente aprendiendo nuevas tecnologias aunque, de momento, especialmente enfocado en desarrollo web (React/Node). Puedes ver algunos de mis proyectos aca debajo :).
     `,
   identidad:
     "En realidad soy un bot con inteligencia artificial entrenado para responder algunas preguntas acerca de Joaquin.",
-  changeLenguage: "Ok, I'll change my speaking to English If you like to!!",
+  changeLenguage: "Ok, I'll change my speaking to English If you like to!",
   hobbies:
     "En general me gusta hacer cosas con tecnologia, entre ellas programar, pero tambien disfruto de los videojuegos, las series y las lecturas ocasionales. Ademas me gusta salir a correr para despejar la mente y mejorar mi salud.",
   contacto:
@@ -147,7 +154,7 @@ const ANSWERS_SPANISH: Answer = {
 };
 
 const ANSWERS_ENGLISH: Answer = {
-  presentacion: `Hi, I'm Joaquin Arlettaz :)`,
+  presentacion: `Hi, I'm Joaquin Arlettaz 🙂, I hope you are having a great day. You can ask me anything you want about me and I will try to answer you.`,
   ocupacion:
     "I am currently a student of systems engineering. I'm constantly learning new technologies although, at the moment, I'm specially focused on web development (React/Node). You can see some of my projects scrolling on this page :)",
   identidad:
@@ -166,7 +173,7 @@ const ANSWERS_ENGLISH: Answer = {
 };
 
 const Chat = () => {
-  const [messages, setMessages] = useState<Message[]>([
+  const [messages, setMessages] = useState<TMessage[]>([
     {
       id: "1",
       from: "bot",
@@ -225,9 +232,7 @@ const Chat = () => {
     <div className={styles.chatContainer}>
       <div ref={refContainer} className={styles.messagesContainer}>
         {messages.map((message) => (
-          <div key={message.id} className={styles[`${message.from}-msg`]}>
-            <span className={styles.message}>{message.text}</span>
-          </div>
+          <Message key={message.id} message={message} />
         ))}
       </div>
 

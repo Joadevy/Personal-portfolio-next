@@ -1,0 +1,31 @@
+.bot-msg,
+.user-msg {
+  background-color: var((--dark-theme-soft));
+  font-size: 0.9rem;
+  padding: 1rem;
+  border-radius: 1.25rem;
+  max-width: 80%;
+  color: var(--text-color);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  .message {
+    background-color: var((--dark-theme-soft));
+  }
+}
+
+.messageActive {
+  opacity: 1;
+}
+
+.bot-msg {
+  border: 1px solid var(--cyan);
+  align-self: start;
+  border-bottom-left-radius: 0px;
+}
+
+.user-msg {
+  border: 1px solid var(--violet);
+  align-self: end;
+  border-bottom-right-radius: 0px;
+}
