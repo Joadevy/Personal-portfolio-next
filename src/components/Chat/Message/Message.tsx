@@ -4,9 +4,11 @@ import styles from "./Message.module.scss";
 
 type props = {
   message: TMessage;
+  isLoading: boolean;
+  isLast: boolean;
 };
 
-const Message: FC<props> = ({ message }) => {
+const Message: FC<props> = ({ message, isLoading, isLast }) => {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -27,7 +29,21 @@ const Message: FC<props> = ({ message }) => {
           : styles[`${message.from}-msg`]
       }
     >
-      <span className={styles.message}>{message.text}</span>
+      <div
+        className={
+          isLoading && isLast && message.from === "bot" ? styles.botLoading : ""
+        }
+      >
+        <div
+          className={
+            isLoading && message.from === "bot" && isLast
+              ? styles.message + " " + styles.dotPulse
+              : styles.message
+          }
+        >
+          {message.text}
+        </div>
+      </div>
     </div>
   );
 };

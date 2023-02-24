@@ -117,12 +117,6 @@ const EXAMPLES: Example[] = [
   { text: "let's talk in english", label: "changeLenguage" },
 ];
 
-const toggleActiveMessage = () => {
-  setTimeout(() => {
-    return styles[`messageActive`];
-  }, 150);
-};
-
 type Answer = {
   presentacion: string;
   changeLenguage: string;
@@ -205,6 +199,19 @@ const Chat = () => {
       },
     ]);
 
+    setTimeout(
+      () =>
+        setMessages((messages) => [
+          ...messages,
+          {
+            id: crypto.randomUUID(),
+            from: "bot",
+            text: "",
+          },
+        ]),
+      600
+    );
+
     const prediction: "ocupacion" | "presentacion" | "changeLenguage" =
       await getPrediction(userMessage, EXAMPLES);
 
@@ -213,26 +220,30 @@ const Chat = () => {
       : prediction === "changeLenguage" && language === "en"
       ? setLenguage("es")
       : "";
-
-    setMessages((messages) => [
-      ...messages,
-      {
-        id: crypto.randomUUID(),
-        from: "bot",
-        text:
-          language === "es"
-            ? ANSWERS_SPANISH[prediction]
-            : ANSWERS_ENGLISH[prediction],
-      },
-    ]);
     setLoading(false);
+
+    setMessages((messages) => {
+      const updatedMessages = [...messages];
+      let answer: string;
+      language === "es"
+        ? (answer = ANSWERS_SPANISH[prediction])
+        : (answer = ANSWERS_ENGLISH[prediction]);
+      updatedMessages[updatedMessages.length - 1].text = answer;
+
+      return updatedMessages;
+    });
   };
 
   return (
     <div className={styles.chatContainer}>
       <div ref={refContainer} className={styles.messagesContainer}>
-        {messages.map((message) => (
-          <Message key={message.id} message={message} />
+        {messages.map((message, index) => (
+          <Message
+            key={message.id}
+            message={message}
+            isLoading={isLoading}
+            isLast={index === messages.length - 1}
+          />
         ))}
       </div>
 
