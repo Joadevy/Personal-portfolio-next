@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Rubik } from "@next/font/google";
 
 import styles from "../../styles/home.module.scss";
