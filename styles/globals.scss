@@ -20,6 +20,42 @@
 }
 
 html {
+  scrollbar-face-color: var(--dark-theme-soft);
+  scrollbar-base-color: var(--dark-theme-soft);
+  scrollbar-3dlight-color: var(--dark-theme-soft);
+  scrollbar-highlight-color: var(--dark-theme-soft);
+  scrollbar-track-color: var(--dark-theme);
+  scrollbar-arrow-color: var(--dark-theme);
+  scrollbar-shadow-color: var(--dark-theme-soft);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 3px;
+}
+::-webkit-scrollbar-button {
+  background-color: var(--dark-theme-soft);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--dark-theme-soft);
+}
+::-webkit-scrollbar-track-piece {
+  background-color: var(--dark-theme);
+}
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: var(--dark-theme-soft);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: var(--dark-theme-soft);
+}
+::-webkit-resizer {
+  background-color: var(--dark-theme-soft);
+}
+
+html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
