@@ -38,7 +38,7 @@ export const getGreeting = () => {
 
   const actualHour = new Date().getHours();
 
-  if (actualHour > 18) {
+  if (actualHour > 18 || actualHour < 5) {
     return GREETINGS["night"];
   } else if (actualHour > 11 && actualHour < 19) {
     return GREETINGS["afternoon"];
