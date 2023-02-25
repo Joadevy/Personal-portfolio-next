@@ -49,6 +49,7 @@
     }
 
     .heroText {
+      margin-top: 0.25rem;
       h1 {
         text-align: center;
       }
@@ -84,5 +85,11 @@
 @media only screen and (min-width: 1024px) {
   .main {
     padding: 0 17.5rem;
+
+    .welcomeSection {
+      .heroText {
+        margin-top: 0rem;
+      }
+    }
   }
 }
