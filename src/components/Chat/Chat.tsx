@@ -388,7 +388,7 @@ const Chat = () => {
           {
             id: crypto.randomUUID(),
             from: "bot",
-            text: <p className={styles.backgroundDark}>``</p>,
+            text: <span className={styles.backgroundDark}>``</span>,
           },
         ]),
       600

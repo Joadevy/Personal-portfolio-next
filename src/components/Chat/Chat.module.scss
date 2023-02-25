@@ -18,7 +18,7 @@
   display: flex;
   gap: 0.75rem;
   flex-direction: column;
-  height: 350px;
+  height: 400px;
   overflow-y: auto;
 }
 
@@ -26,6 +26,10 @@
   .chatContainer {
     min-width: 300px;
     max-width: 390px;
+  }
+
+  .messagesContainer {
+    height: 500px;
   }
 }
 
