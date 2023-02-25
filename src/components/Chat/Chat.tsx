@@ -1,7 +1,8 @@
 "use client";
 
 import { getGreeting, getPrediction } from "helpers/helpers";
-import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import styles from "./Chat.module.scss";
 import Message from "./Message/Message";
 
@@ -123,7 +124,7 @@ type Answer = {
   ocupacion: string;
   identidad: string;
   hobbies: string;
-  contacto: string;
+  contacto: ReactNode;
   detalles: string;
   futuro: string;
   ooc: string;
@@ -138,8 +139,37 @@ const ANSWERS_SPANISH: Answer = {
   changeLenguage: "Ok, I'll change my speaking to English If you like to!",
   hobbies:
     "En general me gusta hacer cosas con tecnologia, entre ellas programar, pero tambien disfruto de los videojuegos, las series y las lecturas ocasionales. Ademas me gusta salir a correr para despejar la mente y mejorar mi salud.",
-  contacto:
-    "Puedes encontrarme en Twitter como @joaquinArlettaz y en LinkedIn como joaquín-arlettaz, tienes los enlaces en la seccion de contacto de esta pagina!",
+  contacto: (
+    <span className={styles.backgroundDark}>
+      Puedes encontrarme en alguna de mis redes como:
+      <ul className={styles.chatContactContainer}>
+        <li className={styles.chatContact}>
+          <span className={styles.backgroundDark}>↪ Twitter:</span>
+          <Link
+            className={styles.links}
+            target="_blank"
+            data-content="@joaquinArlettaz"
+            href="https://twitter.com/JoaquinArlettaz"
+          >
+            @joaquinArlettaz
+          </Link>
+        </li>
+        <li className={styles.chatContact}>
+          <span className={styles.backgroundDark}>↪ LinkedIn:</span>
+          <Link
+            data-content="joaquin-arlettaz"
+            className={styles.links}
+            target="_blank"
+            href="https://www.linkedin.com/in/joaqu%C3%ADn-arlettaz/"
+            rel="noreferrer"
+          >
+            joaquin-arlettaz
+          </Link>
+        </li>
+      </ul>
+      Estare encantado de responderte!
+    </span>
+  ),
   futuro:
     "Para mi futuro, me gustaria desarrollar mis habilidades en alguna rama de tecnologia, trabajar junto a un equipo agradable y conocer lugares y personas nuevas",
   detalles:
@@ -157,8 +187,37 @@ const ANSWERS_ENGLISH: Answer = {
     "Ok, cambiare mi forma de hablarte a español si lo prefieres!",
   hobbies:
     "In general I like to do things with technology, including programming, but I also enjoy video games, series and casual reading. I also like to go running to clear my mind and improve my health",
-  contacto:
-    "You can find me on Twitter as @joaquinArlettaz and on LinkedIn as joaquin-arlettaz, you have the links in the contact section of this page!",
+  contacto: (
+    <span className={styles.backgroundDark}>
+      You can find me on one of my social media:
+      <ul className={styles.chatContactContainer}>
+        <li className={styles.chatContact}>
+          <span className={styles.backgroundDark}>↪ Twitter:</span>
+          <Link
+            className={styles.links}
+            target="_blank"
+            data-content="@joaquinArlettaz"
+            href="https://twitter.com/JoaquinArlettaz"
+          >
+            @joaquinArlettaz
+          </Link>
+        </li>
+        <li className={styles.chatContact}>
+          <span className={styles.backgroundDark}>↪ LinkedIn:</span>
+          <Link
+            data-content="joaquin-arlettaz"
+            className={styles.links}
+            target="_blank"
+            href="https://www.linkedin.com/in/joaqu%C3%ADn-arlettaz/"
+            rel="noreferrer"
+          >
+            joaquin-arlettaz
+          </Link>
+        </li>
+      </ul>
+      I will be glad to answer you!
+    </span>
+  ),
   detalles:
     "Mmmm what else can I tell you? I'm from Argentina, I was born very close to the turn of the century, my zodiac sign is Sagittarius, my favorite food is sandwiches de miga (argy type of sandwiches) and I have a musical preference towards electronic music but I like almost any genre. ",
   futuro:
