@@ -52,23 +52,20 @@ export default function Home() {
         <section id="projects" className={styles.projects}>
           <h2>Projects</h2>
           <p>These are some of my projects:</p>
-
           <Project
-            title="To-do por hacer"
-            desc="A to-do list app with some extra features."
-            webUrl="https://joadevy.github.io/todo-por-hacer/"
-            repoUrl="https://github.com/Joadevy/todo-por-hacer"
-            img="/icons/todo.webp"
+            title="Adviency"
+            desc="Christmas gift-list app with some extra features."
+            webUrl="https://adviency-joadevy.vercel.app/"
+            repoUrl="https://github.com/Joadevy/adviency"
+            img="/icons/giftList.webp"
           />
-
           <Project
-            title="Trader or Not?"
-            desc="Higher or lower game with cryptocurrency prices."
-            webUrl="https://joadevy.github.io/TraderOrNot/"
-            repoUrl="https://github.com/Joadevy/TraderOrNot"
-            img="/icons/bitcoin.webp"
+            title="Where in the world?"
+            desc="Country searcher app to look for details of each one."
+            webUrl="https://where-world-app.vercel.app/"
+            repoUrl="https://github.com/Joadevy/where-world-app"
+            img="/icons/search.webp"
           />
-
           <Project
             title="Crowdfunding landing page"
             desc="Interface for an app to collect funds for a project."
@@ -78,13 +75,20 @@ export default function Home() {
           />
 
           <Project
-            title="Tic Tac Toe"
-            desc="The traditional three-in-line game on the web."
-            webUrl="https://joadevy.github.io/Tic-Tac-Toe/"
-            repoUrl="https://github.com/Joadevy/Tic-Tac-Toe"
-            img="/icons/tictactoe.webp"
+            title="Sintaxiscript Interpreter"
+            desc="Interpreter for a custom programming language built in typescript."
+            webUrl="https://joadevy.github.io/Interpreter-sintaxiscript/"
+            repoUrl="https://github.com/Joadevy/Interpreter-sintaxiscript"
+            img="/icons/interpreter.webp"
           />
 
+          <Project
+            title="Trader or Not?"
+            desc="Higher or lower game with cryptocurrency prices."
+            webUrl="https://joadevy.github.io/TraderOrNot/"
+            repoUrl="https://github.com/Joadevy/TraderOrNot"
+            img="/icons/bitcoin.webp"
+          />
           <Project
             title="E-commerce product page"
             desc="UI for e-commerce with built-in cart features."
