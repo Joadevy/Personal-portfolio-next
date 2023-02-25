@@ -1,6 +1,6 @@
 .navbar {
   border-radius: 5px;
-  border: 0.5px solid var(--violet);
+  border: 1px solid var(--violet);
   background-color: var(--dark-theme);
   position: fixed;
   display: flex;
@@ -49,6 +49,7 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
+    position: relative;
 
     li {
       display: none;
@@ -87,7 +88,8 @@
       align-items: center;
       flex-direction: row;
       flex-wrap: wrap;
-      margin-right: -0.5rem;
+      gap: 5px;
+
       li {
         background-color: var(--dark-theme-soft);
         display: block;
@@ -95,7 +97,6 @@
 
         a {
           margin-bottom: 0rem;
-          margin-right: 0.5rem;
         }
       }
     }
