@@ -68,6 +68,12 @@
   border: 1px solid var(--gray-border);
   padding: 8px;
   color: var(--violet);
+  transition: opacity 250ms;
+}
+
+.inputSubmit:hover {
+  cursor: pointer;
+  opacity: 50%;
 }
 
 .inputLoading {
@@ -78,11 +84,6 @@
   padding: 8px;
   color: var(--violet);
   opacity: 70%;
-}
-
-.inputSubmit:hover {
-  cursor: pointer;
-  opacity: 50%;
 }
 
 @media only screen and (max-width: 400px) {

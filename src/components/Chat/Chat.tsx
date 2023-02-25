@@ -406,7 +406,7 @@ const Chat = () => {
         <input
           className={isLoading ? styles.inputLoading : styles.inputSubmit}
           type="submit"
-          value={isLoading ? "…" : "↻"}
+          value={isLoading ? "…" : "↩"}
           disabled={isLoading}
         />
       </form>
