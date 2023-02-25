@@ -128,6 +128,39 @@ const EXAMPLES: Example[] = [
   { text: "can you answer in english?", label: "changeLenguage" },
   { text: "hablamos en ingles?", label: "changeLenguage" },
   { text: "let's talk in english", label: "changeLenguage" },
+  { text: "cambia de idioma a ingles", label: "changeLenguage" },
+  { text: "hablemos en ingles", label: "changeLenguage" },
+  { text: "cambia a ingles", label: "changeLenguage" },
+  { text: "cambia de idioma", label: "changeLenguage" },
+  { text: "hablemos en español", label: "changeLenguage" },
+  { text: "puedes cambiar de idioma?", label: "changeLenguage" },
+  { text: "podrias cambiar a ingles?", label: "changeLenguage" },
+  { text: "volvamos al español", label: "changeLenguage" },
+  { text: "volvamos al ingles", label: "changeLenguage" },
+  { text: "contacto", label: "contacto" },
+  { text: "mas detalles de vos", label: "detalles" },
+  { text: "mas informacion tuya", label: "detalles" },
+  { text: "quiero saber mas de vos", label: "detalles" },
+  { text: "decime algo mas", label: "detalles" },
+  { text: "contame mas de vos", label: "detalles" },
+  { text: "que mas me podes decir?", label: "detalles" },
+  { text: "estas disponible?", label: "ocupacion" },
+  { text: "que experiencia tenes?", label: "ocupacion" },
+  { text: "que podes hacer?", label: "ocupacion" },
+  { text: "para que tipo de roles estas calificado?", label: "ocupacion" },
+  { text: "en que posicion te desempeñas", label: "ocupacion" },
+  { text: "que rol te gusta?", label: "ocupacion" },
+  { text: "frontend", label: "ocupacion" },
+  { text: "backend", label: "ocupacion" },
+  { text: "sos desarrollador de software?", label: "ocupacion" },
+  { text: "trabajar", label: "ocupacion" },
+  { text: "donde te encuentro?", label: "contacto" },
+  { text: "encontrarte", label: "contacto" },
+  { text: "enviarte un mensaje", label: "contacto" },
+  { text: "cuales son tus habilidades?", label: "ocupacion" },
+  { text: "habilidad", label: "ocupacion" },
+  { text: "distancia al sol", label: "ooc" },
+  { text: "cuando empezo la era del hielo", label: "ooc" },
 ];
 
 const ANSWERS_SPANISH: Answer = {
@@ -375,8 +408,8 @@ const Chat = () => {
       const updatedMessages = [...messages];
       let answer: ReactElement<HTMLElement>;
       language === "es"
-        ? (answer = ANSWERS_SPANISH[prediction])
-        : (answer = ANSWERS_ENGLISH[prediction]);
+        ? (answer = ANSWERS_SPANISH[prediction] ?? ANSWERS_SPANISH["ooc"])
+        : (answer = ANSWERS_ENGLISH[prediction] ?? ANSWERS_ENGLISH["ooc"]);
       updatedMessages[updatedMessages.length - 1].text = answer;
 
       return updatedMessages;
