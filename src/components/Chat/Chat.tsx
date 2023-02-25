@@ -12,6 +12,18 @@ export type TMessage = {
   text: ReactElement<HTMLElement>;
 };
 
+type Answer = {
+  presentacion: ReactElement<HTMLElement>;
+  changeLenguage: ReactElement<HTMLElement>;
+  ocupacion: ReactElement<HTMLElement>;
+  identidad: ReactElement<HTMLElement>;
+  hobbies: ReactElement<HTMLElement>;
+  contacto: ReactElement<HTMLElement>;
+  detalles: ReactElement<HTMLElement>;
+  futuro: ReactElement<HTMLElement>;
+  ooc: ReactElement<HTMLElement>;
+};
+
 export type Example = {
   label: string;
   text: string;
@@ -117,18 +129,6 @@ const EXAMPLES: Example[] = [
   { text: "hablamos en ingles?", label: "changeLenguage" },
   { text: "let's talk in english", label: "changeLenguage" },
 ];
-
-type Answer = {
-  presentacion: ReactElement<HTMLElement>;
-  changeLenguage: ReactElement<HTMLElement>;
-  ocupacion: ReactElement<HTMLElement>;
-  identidad: ReactElement<HTMLElement>;
-  hobbies: ReactElement<HTMLElement>;
-  contacto: ReactElement<HTMLElement>;
-  detalles: ReactElement<HTMLElement>;
-  futuro: ReactElement<HTMLElement>;
-  ooc: ReactElement<HTMLElement>;
-};
 
 const ANSWERS_SPANISH: Answer = {
   presentacion: (
