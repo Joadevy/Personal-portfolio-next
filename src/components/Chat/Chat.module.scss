@@ -84,3 +84,56 @@
     width: 15%;
   }
 }
+
+.chatContactContainer {
+  margin: 0.75rem 0 0.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  background-color: var((--dark-theme-soft));
+
+  .chatContact {
+    background-color: var((--dark-theme-soft));
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+}
+
+.backgroundDark {
+  background-color: var((--dark-theme-soft));
+}
+
+.links {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--cyan);
+
+  &::before {
+    position: absolute;
+    content: attr(data-content);
+    top: 0;
+    left: 0;
+    color: var(--violet);
+    overflow: hidden;
+    transition: width 275ms ease;
+    width: 0;
+    white-space: nowrap;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+}
+
+.link {
+  color: var(--cyan);
+  text-decoration: none;
+  transition: color 150ms;
+
+  &:hover {
+    color: var(--violet);
+  }
+}

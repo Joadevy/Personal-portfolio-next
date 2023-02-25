@@ -1,14 +1,15 @@
 "use client";
 
 import { getGreeting, getPrediction } from "helpers/helpers";
-import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { ReactElement, ReactNode, useEffect, useRef, useState } from "react";
 import styles from "./Chat.module.scss";
 import Message from "./Message/Message";
 
 export type TMessage = {
   id: string;
   from: "user" | "bot";
-  text: string;
+  text: ReactElement<HTMLElement>;
 };
 
 export type Example = {
@@ -118,52 +119,195 @@ const EXAMPLES: Example[] = [
 ];
 
 type Answer = {
-  presentacion: string;
-  changeLenguage: string;
-  ocupacion: string;
-  identidad: string;
-  hobbies: string;
-  contacto: string;
-  detalles: string;
-  futuro: string;
-  ooc: string;
+  presentacion: ReactElement<HTMLElement>;
+  changeLenguage: ReactElement<HTMLElement>;
+  ocupacion: ReactElement<HTMLElement>;
+  identidad: ReactElement<HTMLElement>;
+  hobbies: ReactElement<HTMLElement>;
+  contacto: ReactElement<HTMLElement>;
+  detalles: ReactElement<HTMLElement>;
+  futuro: ReactElement<HTMLElement>;
+  ooc: ReactElement<HTMLElement>;
 };
 
 const ANSWERS_SPANISH: Answer = {
-  presentacion: `Hola, soy Joaquin Arlettaz 🙂, espero estes teniendo un gran dia. Podes preguntarme lo que quieras acerca de mi e intentare responderte.`,
-  ocupacion: `Actualmente soy estudiante de ingenieria en sistemas. Estoy constantemente aprendiendo nuevas tecnologias aunque, de momento, especialmente enfocado en desarrollo web (React/Node). Puedes ver algunos de mis proyectos aca debajo :).
-    `,
-  identidad:
-    "En realidad soy un bot con inteligencia artificial entrenado para responder algunas preguntas acerca de Joaquin.",
-  changeLenguage: "Ok, I'll change my speaking to English If you like to!",
-  hobbies:
-    "En general me gusta hacer cosas con tecnologia, entre ellas programar, pero tambien disfruto de los videojuegos, las series y las lecturas ocasionales. Ademas me gusta salir a correr para despejar la mente y mejorar mi salud.",
-  contacto:
-    "Puedes encontrarme en Twitter como @joaquinArlettaz y en LinkedIn como joaquín-arlettaz, tienes los enlaces en la seccion de contacto de esta pagina!",
-  futuro:
-    "Para mi futuro, me gustaria desarrollar mis habilidades en alguna rama de tecnologia, trabajar junto a un equipo agradable y conocer lugares y personas nuevas",
-  detalles:
-    "Mmmm que mas puedo contarte? Soy de Argentina, naci muy cerquita del cambio de siglo, mi signo del zodiaco es Sagitario, mi comida preferida son los sandwiches de miga y tengo preferencia musical hacia la musica electronica pero me gusta practicamente cualquier genero. ",
-  ooc: "Lo siento, no tengo una respuesta para eso :(, porfavor intenta con algo mas especifico acerca de Joaquin.",
+  presentacion: (
+    <span className={styles.backgroundDark}>
+      Hola, soy Joaquin Arlettaz 🙂, espero estes teniendo un gran dia. Podes
+      preguntarme lo que quieras acerca de mi e intentare responderte.
+    </span>
+  ),
+  ocupacion: (
+    <span className={styles.backgroundDark}>
+      Actualmente soy estudiante de ingenieria en sistemas. Estoy constantemente
+      aprendiendo nuevas tecnologias aunque, de momento, especialmente enfocado
+      en desarrollo web (React/Node). Puedes ver algunos de mis proyectos{" "}
+      <a className={styles.link} href={"#projects"}>
+        haciendo click aqui
+      </a>
+      .
+    </span>
+  ),
+  identidad: (
+    <span className={styles.backgroundDark}>
+      En realidad soy un bot con inteligencia artificial entrenado para
+      responder algunas preguntas acerca de Joaquin.
+    </span>
+  ),
+  changeLenguage: (
+    <span className={styles.backgroundDark}>
+      Ok, I&apos;ll change my speaking to English If you like to!
+    </span>
+  ),
+  hobbies: (
+    <span className={styles.backgroundDark}>
+      En general me gusta hacer cosas con tecnologia, entre ellas programar,
+      pero tambien disfruto de los videojuegos, las series y las lecturas
+      ocasionales. Ademas me gusta salir a correr para despejar la mente y
+      mejorar mi salud.
+    </span>
+  ),
+  contacto: (
+    <span className={styles.backgroundDark}>
+      Puedes encontrarme en alguna de mis redes como:
+      <ul className={styles.chatContactContainer}>
+        <li className={styles.chatContact}>
+          <span className={styles.backgroundDark}>↪ Twitter:</span>
+          <Link
+            className={styles.links}
+            target="_blank"
+            data-content="@joaquinArlettaz"
+            href="https://twitter.com/JoaquinArlettaz"
+          >
+            @joaquinArlettaz
+          </Link>
+        </li>
+        <li className={styles.chatContact}>
+          <span className={styles.backgroundDark}>↪ LinkedIn:</span>
+          <Link
+            data-content="joaquin-arlettaz"
+            className={styles.links}
+            target="_blank"
+            href="https://www.linkedin.com/in/joaqu%C3%ADn-arlettaz/"
+            rel="noreferrer"
+          >
+            joaquin-arlettaz
+          </Link>
+        </li>
+      </ul>
+      Estare encantado de responderte!
+    </span>
+  ),
+  futuro: (
+    <span className={styles.backgroundDark}>
+      Para mi futuro, me gustaria desarrollar mis habilidades en alguna rama de
+      tecnologia, trabajar junto a un equipo agradable y conocer lugares y
+      personas nuevas.
+    </span>
+  ),
+  detalles: (
+    <span className={styles.backgroundDark}>
+      Mmmm que mas puedo contarte? Soy de Argentina, naci muy cerquita del
+      cambio de siglo, mi signo del zodiaco es Sagitario, mi comida preferida
+      son los sandwiches de miga y tengo preferencia musical hacia la musica
+      electronica pero me gusta practicamente cualquier genero.
+    </span>
+  ),
+  ooc: (
+    <span className={styles.backgroundDark}>
+      Lo siento, no tengo una respuesta para eso :(, porfavor intenta con algo
+      mas especifico acerca de Joaquin.
+    </span>
+  ),
 };
 
 const ANSWERS_ENGLISH: Answer = {
-  presentacion: `Hi, I'm Joaquin Arlettaz 🙂, I hope you are having a great day. You can ask me anything you want about me and I will try to answer you.`,
-  ocupacion:
-    "I am currently a student of systems engineering. I'm constantly learning new technologies although, at the moment, I'm specially focused on web development (React/Node). You can see some of my projects scrolling on this page :)",
-  identidad:
-    "Actually I'm a bot with Artificial Intelligence, trained to answer some questions about Joaquin",
-  changeLenguage:
-    "Ok, cambiare mi forma de hablarte a español si lo prefieres!",
-  hobbies:
-    "In general I like to do things with technology, including programming, but I also enjoy video games, series and casual reading. I also like to go running to clear my mind and improve my health",
-  contacto:
-    "You can find me on Twitter as @joaquinArlettaz and on LinkedIn as joaquin-arlettaz, you have the links in the contact section of this page!",
-  detalles:
-    "Mmmm what else can I tell you? I'm from Argentina, I was born very close to the turn of the century, my zodiac sign is Sagittarius, my favorite food is sandwiches de miga (argy type of sandwiches) and I have a musical preference towards electronic music but I like almost any genre. ",
-  futuro:
-    "For my future, I would like to develop my skills in some branch of technology, work together with a nice team and meet new places and people.",
-  ooc: "Sorry, I don't have an answer for that :(, please try something more specific about Joaquin.",
+  presentacion: (
+    <span className={styles.backgroundDark}>
+      Hi, I&apos;m Joaquin Arlettaz 🙂, I hope you are having a great day. You
+      can ask me anything you want about me and I will try to answer you.
+    </span>
+  ),
+  ocupacion: (
+    <span className={styles.backgroundDark}>
+      I am currently a student of systems engineering. I&apos;m constantly
+      learning new technologies although, at the moment, I&apos;m specially
+      focused on web development (React/Node). You can see some of my projects
+      <a className={styles.link} href={"#projects"}>
+        by clicking here
+      </a>
+      .
+    </span>
+  ),
+  identidad: (
+    <span className={styles.backgroundDark}>
+      Actually I&apos;m a bot with Artificial Intelligence, trained to answer
+      some questions about Joaquin.
+    </span>
+  ),
+  changeLenguage: (
+    <span className={styles.backgroundDark}>
+      Ok, cambiare mi forma de hablarte a español si lo prefieres!
+    </span>
+  ),
+  hobbies: (
+    <span className={styles.backgroundDark}>
+      In general I like to do things with technology, including programming, but
+      I also enjoy video games, series and casual reading. I also like to go
+      running to clear my mind and improve my health.
+    </span>
+  ),
+  contacto: (
+    <span className={styles.backgroundDark}>
+      You can find me on one of my social media:
+      <ul className={styles.chatContactContainer}>
+        <li className={styles.chatContact}>
+          <span className={styles.backgroundDark}>↪ Twitter:</span>
+          <Link
+            className={styles.links}
+            target="_blank"
+            data-content="@joaquinArlettaz"
+            href="https://twitter.com/JoaquinArlettaz"
+          >
+            @joaquinArlettaz
+          </Link>
+        </li>
+        <li className={styles.chatContact}>
+          <span className={styles.backgroundDark}>↪ LinkedIn:</span>
+          <Link
+            data-content="joaquin-arlettaz"
+            className={styles.links}
+            target="_blank"
+            href="https://www.linkedin.com/in/joaqu%C3%ADn-arlettaz/"
+            rel="noreferrer"
+          >
+            joaquin-arlettaz
+          </Link>
+        </li>
+      </ul>
+      I&apos;ll be glad to answer you!
+    </span>
+  ),
+  detalles: (
+    <span className={styles.backgroundDark}>
+      Mmmm what else can I tell you? I&apos;m from Argentina, I was born very
+      close to the turn of the century, my zodiac sign is Sagittarius, my
+      favorite food is sandwiches de miga (argy type of sandwiches) and I have a
+      musical preference towards electronic music but I like almost any genre.
+    </span>
+  ),
+  futuro: (
+    <span className={styles.backgroundDark}>
+      For my future, I would like to develop my skills in some branch of
+      technology, work together with a nice team and meet new places and people.
+    </span>
+  ),
+  ooc: (
+    <span className={styles.backgroundDark}>
+      Sorry, I don&apos;t have an answer for that :(, please try something more
+      specific about Joaquin.
+    </span>
+  ),
 };
 
 const Chat = () => {
@@ -171,7 +315,12 @@ const Chat = () => {
     {
       id: "1",
       from: "bot",
-      text: `Hi, ${getGreeting()}, let's have a conversation! I'll answer you in Spanish by default but you can change it if you ask me..`,
+      text: (
+        <span className={styles.backgroundDark}>
+          Hi, ${getGreeting()}, let&apos;s have a conversation! I&apos;ll answer
+          you in Spanish by default but you can change it if you ask me..
+        </span>
+      ),
     },
   ]);
   const [isLoading, setLoading] = useState(false);
@@ -195,7 +344,7 @@ const Chat = () => {
       {
         id: crypto.randomUUID(),
         from: "user",
-        text: userMessage,
+        text: <span className={styles.backgroundDark}>{userMessage}</span>,
       },
     ]);
 
@@ -206,7 +355,7 @@ const Chat = () => {
           {
             id: crypto.randomUUID(),
             from: "bot",
-            text: "",
+            text: <p className={styles.backgroundDark}>``</p>,
           },
         ]),
       600
@@ -224,7 +373,7 @@ const Chat = () => {
 
     setMessages((messages) => {
       const updatedMessages = [...messages];
-      let answer: string;
+      let answer: ReactElement<HTMLElement>;
       language === "es"
         ? (answer = ANSWERS_SPANISH[prediction])
         : (answer = ANSWERS_ENGLISH[prediction]);
