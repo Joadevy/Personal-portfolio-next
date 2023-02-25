@@ -317,7 +317,7 @@ const Chat = () => {
       from: "bot",
       text: (
         <span className={styles.backgroundDark}>
-          Hi, ${getGreeting()}, let&apos;s have a conversation! I&apos;ll answer
+          Hi, {getGreeting()}, let&apos;s have a conversation! I&apos;ll answer
           you in Spanish by default but you can change it if you ask me..
         </span>
       ),
