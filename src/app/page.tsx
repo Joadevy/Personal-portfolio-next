@@ -5,6 +5,9 @@ import Nav from "../components/Nav/Nav";
 import Project from "@/components/Project/Project";
 import SocialLink from "@/components/SocialLink/SocialLink";
 import Chat from "@/components/Chat/Chat";
+import HoverImage from "@/components/HoverImage/HoverImage";
+import staticProfileImg from "../../public/photos/profile-static.webp";
+import hoverProfileImg from "../../public/photos/profile-hover.webp";
 
 const rubik = Rubik({
   style: ["normal", "italic"],
@@ -17,21 +20,23 @@ export default function Home() {
       <Nav />
       <main className={styles.main}>
         <section className={styles.welcomeSection} id="welcome-section">
-          <div className={styles["img-container"]}></div>
-          <h1>Hey! I&apos;m Joaquín Arlettaz</h1>
-          <p>
-            An Information Systems Engineering Student passionate about
-            technology and teamwork. I&apos;m currently learning web
-            technologies to become a better IT professional. You can{" "}
-            <a data-content="know more about me" href="#knowMore">
-              know more about me
-            </a>{" "}
-            or see my way to achieve my goal in{" "}
-            <a data-content="my completed projects" href="#projects">
-              my completed projects
-            </a>
-            .
-          </p>
+          <HoverImage src={staticProfileImg} hoverSrc={hoverProfileImg} />
+          <div className={styles.heroText}>
+            <h1>Hey! I&apos;m Joaquín Arlettaz</h1>
+            <p>
+              An Information Systems Engineering Student passionate about
+              technology and teamwork. I&apos;m currently learning web
+              technologies to become a better IT professional. You can{" "}
+              <a data-content="know more about me" href="#knowMore">
+                know more about me
+              </a>{" "}
+              or see my way to achieve my goal in{" "}
+              <a data-content="my completed projects" href="#projects">
+                my completed projects
+              </a>
+              .
+            </p>
+          </div>
         </section>
 
         <section id="knowMore" className={styles.projects}>

@@ -18,16 +18,8 @@
     align-items: center;
     justify-content: center;
     border-bottom: none;
-
-    div {
-      background-image: url(/photos/profile-static.webp);
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 300px;
-      width: 300px;
-      margin-bottom: 1rem;
-    }
+    margin-bottom: 5rem;
+    padding-bottom: 0;
 
     a {
       color: var(--violet);
@@ -55,6 +47,12 @@
         text-decoration-style: wavy;
       }
     }
+
+    .heroText {
+      h1 {
+        text-align: center;
+      }
+    }
   }
 
   .projects {
@@ -77,33 +75,14 @@
       margin-right: 0.5rem;
     }
   }
+
+  .contact {
+    border-bottom: 0;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
   .main {
     padding: 0 17.5rem;
-
-    .welcomeSection {
-      div {
-        height: 450px;
-        width: 450px;
-        transition: background-image 0.5s;
-        margin-bottom: 0rem;
-
-        &:hover {
-          background-image: url(/photos/profile-hover.webp);
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 300px) {
-  .main {
-    .welcomeSection {
-      div {
-        width: 200px;
-      }
-    }
   }
 }
