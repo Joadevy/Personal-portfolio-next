@@ -20,6 +20,7 @@ const Project: FC<props> = ({ title, desc, webUrl, repoUrl, img }) => {
           className={styles.imgProject}
           src={img}
           alt=""
+          style={{ width: "auto" }}
         />
       </div>
       <div className={styles.projectDesc}>

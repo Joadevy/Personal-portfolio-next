@@ -18,7 +18,7 @@ export default function Head() {
         `}
       </Script>
       <meta charSet="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Joaquín Arlettaz ~ Web developer</title>
       <meta property="og:title" content="Joaquin Arlettaz personal portfolio" />

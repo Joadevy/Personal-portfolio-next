@@ -27,6 +27,10 @@ const HoverImage: FC<props> = ({ src, hoverSrc }) => {
         fill={true}
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}
+        priority={true}
+        sizes="(max-width: 768px) 80vw,
+              (max-width: 1200px) 35vw,
+              25vw"
       />
     </div>
   );
