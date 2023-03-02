@@ -46,7 +46,7 @@ export default function Home() {
             details:
           </p>
 
-          {/* <Chat></Chat> */}
+          <Chat></Chat>
         </section>
 
         <section id="projects" className={styles.projects}>
