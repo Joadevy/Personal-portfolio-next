@@ -53,6 +53,13 @@ export default function Home() {
           <h2>Projects</h2>
           <p>These are some of my projects:</p>
           <Project
+            title="Informovies"
+            desc="Movies & series: all the information you'd want to know."
+            webUrl="https://informovies.vercel.app/"
+            repoUrl="https://github.com/Joadevy/Informovies"
+            img="/icons/movie.webp"
+          />
+          <Project
             title="Adviency"
             desc="Christmas gift-list app with some extra features."
             webUrl="https://adviency-joadevy.vercel.app/"
