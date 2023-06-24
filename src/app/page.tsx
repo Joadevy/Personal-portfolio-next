@@ -52,33 +52,13 @@ export default function Home() {
         <section id="projects" className={styles.projects}>
           <h2>Projects</h2>
           <p>These are some of my projects:</p>
+
           <Project
             title="Informovies"
             desc="Movies & series: all the information you'd want to know."
             webUrl="https://informovies.vercel.app/"
             repoUrl="https://github.com/Joadevy/Informovies"
             img="/icons/movie.webp"
-          />
-          <Project
-            title="Adviency"
-            desc="Christmas gift-list app with some extra features."
-            webUrl="https://adviency-joadevy.vercel.app/"
-            repoUrl="https://github.com/Joadevy/adviency"
-            img="/icons/giftList.webp"
-          />
-          <Project
-            title="Where in the world?"
-            desc="Country searcher app to look for details of each one."
-            webUrl="https://where-world-app.vercel.app/"
-            repoUrl="https://github.com/Joadevy/where-world-app"
-            img="/icons/search.webp"
-          />
-          <Project
-            title="Crowdfunding landing page"
-            desc="Interface for an app to collect funds for a project."
-            webUrl="https://crowdfunding-product-page-joadevy.vercel.app/"
-            repoUrl="https://github.com/Joadevy/crowdfunding-product-page"
-            img="/icons/landing.webp"
           />
 
           <Project
@@ -90,12 +70,37 @@ export default function Home() {
           />
 
           <Project
+            title="Crowdfunding landing page"
+            desc="Interface for an app to collect funds for a project."
+            webUrl="https://crowdfunding-product-page-joadevy.vercel.app/"
+            repoUrl="https://github.com/Joadevy/crowdfunding-product-page"
+            img="/icons/landing.webp"
+          />
+
+          <Project
+            title="Where in the world?"
+            desc="Country searcher app to look for details of each one."
+            webUrl="https://where-world-app.vercel.app/"
+            repoUrl="https://github.com/Joadevy/where-world-app"
+            img="/icons/search.webp"
+          />
+
+          <Project
+            title="Adviency"
+            desc="Christmas gift-list app with some extra features."
+            webUrl="https://adviency-joadevy.vercel.app/"
+            repoUrl="https://github.com/Joadevy/adviency"
+            img="/icons/giftList.webp"
+          />
+
+          <Project
             title="Trader or Not?"
             desc="Higher or lower game with cryptocurrency prices."
             webUrl="https://joadevy.github.io/TraderOrNot/"
             repoUrl="https://github.com/Joadevy/TraderOrNot"
             img="/icons/bitcoin.webp"
           />
+
           <Project
             title="E-commerce product page"
             desc="UI for e-commerce with built-in cart features."
