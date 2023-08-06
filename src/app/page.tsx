@@ -70,6 +70,14 @@ export default function Home() {
           />
 
           <Project
+            title="Trader or Not?"
+            desc="Higher or lower game with cryptocurrency prices."
+            webUrl="https://trader-or-not-next.vercel.app/"
+            repoUrl="https://github.com/Joadevy/Trader-or-not-next"
+            img="/icons/bitcoin.webp"
+          />
+
+          <Project
             title="Crowdfunding landing page"
             desc="Interface for an app to collect funds for a project."
             webUrl="https://crowdfunding-product-page-joadevy.vercel.app/"
@@ -91,14 +99,6 @@ export default function Home() {
             webUrl="https://adviency-joadevy.vercel.app/"
             repoUrl="https://github.com/Joadevy/adviency"
             img="/icons/giftList.webp"
-          />
-
-          <Project
-            title="Trader or Not?"
-            desc="Higher or lower game with cryptocurrency prices."
-            webUrl="https://joadevy.github.io/TraderOrNot/"
-            repoUrl="https://github.com/Joadevy/TraderOrNot"
-            img="/icons/bitcoin.webp"
           />
 
           <Project
