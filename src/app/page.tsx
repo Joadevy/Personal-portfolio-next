@@ -78,6 +78,14 @@ export default function Home() {
           />
 
           <Project
+            title="Reflectify"
+            desc="Reflections feed app to share your thoughts with the world."
+            webUrl="https://reflectifyapp.vercel.app/register"
+            repoUrl="https://github.com/Joadevy/Reflectify"
+            img="/icons/reflectify.webp"
+          />
+
+          <Project
             title="Crowdfunding landing page"
             desc="Interface for an app to collect funds for a project."
             webUrl="https://crowdfunding-product-page-joadevy.vercel.app/"
@@ -99,14 +107,6 @@ export default function Home() {
             webUrl="https://adviency-joadevy.vercel.app/"
             repoUrl="https://github.com/Joadevy/adviency"
             img="/icons/giftList.webp"
-          />
-
-          <Project
-            title="E-commerce product page"
-            desc="UI for e-commerce with built-in cart features."
-            webUrl="https://joadevy.github.io/FM-Ecommerce-ProductPage/"
-            repoUrl="https://github.com/Joadevy/FM-Ecommerce-ProductPage"
-            img="/icons/product.webp"
           />
         </section>
 
