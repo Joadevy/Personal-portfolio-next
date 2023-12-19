@@ -54,6 +54,14 @@ export default function Home() {
           <p>These are some of my projects:</p>
 
           <Project
+            title="Weekendless"
+            desc="Ticket-selling platform integrated with Mercadopago."
+            webUrl="https://weekendless.vercel.app/"
+            repoUrl="https://github.com/Joadevy/weekendless"
+            img="/icons/ticketspng.webp"
+          />
+
+          <Project
             title="Informovies"
             desc="Movies & series: all the information you'd want to know."
             webUrl="https://informovies.vercel.app/"
@@ -83,22 +91,6 @@ export default function Home() {
             webUrl="https://reflectifyapp.vercel.app/register"
             repoUrl="https://github.com/Joadevy/Reflectify"
             img="/icons/reflectify.webp"
-          />
-
-          <Project
-            title="Crowdfunding landing page"
-            desc="Interface for an app to collect funds for a project."
-            webUrl="https://crowdfunding-product-page-joadevy.vercel.app/"
-            repoUrl="https://github.com/Joadevy/crowdfunding-product-page"
-            img="/icons/landing.webp"
-          />
-
-          <Project
-            title="Where in the world?"
-            desc="Country searcher app to look for details of each one."
-            webUrl="https://where-world-app.vercel.app/"
-            repoUrl="https://github.com/Joadevy/where-world-app"
-            img="/icons/search.webp"
           />
 
           <Project
