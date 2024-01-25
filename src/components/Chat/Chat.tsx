@@ -172,7 +172,8 @@ const ANSWERS_SPANISH: Answer = {
   ),
   ocupacion: (
     <span className={styles.backgroundDark}>
-      Actualmente soy estudiante de ingenieria en sistemas. Estoy constantemente
+      Actualmente soy estudiante de ingenieria en sistemas y trabajo como
+      consultor tecnico de tecnologias Oracle. Ademas, estoy constantemente
       aprendiendo nuevas tecnologias aunque, de momento, especialmente enfocado
       en desarrollo web (React/Node). Puedes ver algunos de mis proyectos{" "}
       <a className={styles.link} href={"#projects"}>
@@ -263,9 +264,10 @@ const ANSWERS_ENGLISH: Answer = {
   ),
   ocupacion: (
     <span className={styles.backgroundDark}>
-      I am currently a student of systems engineering. I&apos;m constantly
-      learning new technologies although, at the moment, I&apos;m specially
-      focused on web development (React/Node). You can see some of my projects
+      I am currently a student of systems engineering and working as Oracle
+      Technical Consultant. Also I&apos;m constantly learning new technologies
+      although, at the moment, I&apos;m specially focused on web development
+      (React/Node). You can see some of my projects
       <a className={styles.link} href={"#projects"}>
         by clicking here
       </a>
