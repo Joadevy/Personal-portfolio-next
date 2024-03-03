@@ -70,7 +70,7 @@ export default function Home() {
 
           <Project
             title="Spotynder"
-            desc="Find your next favorite song swipping through new sounds."
+            desc="Find your next favorite song by swiping through new sounds."
             webUrl="https://spotynder.vercel.app/"
             repoUrl="https://github.com/Joadevy/spotynder"
             img="/icons/spotynder.webp"
