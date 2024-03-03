@@ -59,6 +59,22 @@ export default function Home() {
             webUrl="https://weekendless.vercel.app/"
             repoUrl="https://github.com/Joadevy/weekendless"
             img="/icons/ticketspng.webp"
+            technologies={[
+              "Next.js",
+              "TypeScript",
+              "TailwindCSS",
+              "PostgreSQL",
+              "Prisma",
+            ]}
+          />
+
+          <Project
+            title="Spotynder"
+            desc="Find your next favorite song swipping through new sounds."
+            webUrl="https://spotynder.vercel.app/"
+            repoUrl="https://github.com/Joadevy/spotynder"
+            img="/icons/spotynder.webp"
+            technologies={["Astro", "React.js", "TypeScript", "TailwindCSS"]}
           />
 
           <Project
@@ -67,6 +83,7 @@ export default function Home() {
             webUrl="https://informovies.vercel.app/"
             repoUrl="https://github.com/Joadevy/Informovies"
             img="/icons/movie.webp"
+            technologies={["Next.js", "TypeScript", "TailwindCSS"]}
           />
 
           <Project
@@ -75,6 +92,7 @@ export default function Home() {
             webUrl="https://joadevy.github.io/Interpreter-sintaxiscript/"
             repoUrl="https://github.com/Joadevy/Interpreter-sintaxiscript"
             img="/icons/interpreter.webp"
+            technologies={["TypeScript", "Sass"]}
           />
 
           <Project
@@ -83,6 +101,7 @@ export default function Home() {
             webUrl="https://trader-or-not-next.vercel.app/"
             repoUrl="https://github.com/Joadevy/Trader-or-not-next"
             img="/icons/bitcoin.webp"
+            technologies={["Next.js", "TypeScript", "TailwindCSS"]}
           />
 
           <Project
@@ -91,14 +110,14 @@ export default function Home() {
             webUrl="https://reflectifyapp.vercel.app/register"
             repoUrl="https://github.com/Joadevy/Reflectify"
             img="/icons/reflectify.webp"
-          />
-
-          <Project
-            title="Adviency"
-            desc="Christmas gift-list app with some extra features."
-            webUrl="https://adviency-joadevy.vercel.app/"
-            repoUrl="https://github.com/Joadevy/adviency"
-            img="/icons/giftList.webp"
+            technologies={[
+              "React.js",
+              "TypeScript",
+              "TailwindCSS",
+              "Express",
+              "MongoDB",
+              "Mongoose",
+            ]}
           />
         </section>
 
