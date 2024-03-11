@@ -69,9 +69,9 @@ export default function Home() {
           />
 
           <Project
-            title="Spotynder"
+            title="Swiperify"
             desc="Find your next favorite song by swiping through new sounds."
-            webUrl="https://spotynder.vercel.app/"
+            webUrl="https://swiperify.vercel.app/"
             repoUrl="https://github.com/Joadevy/spotynder"
             img="/icons/spotynder.webp"
             technologies={["Astro", "React.js", "TypeScript", "TailwindCSS"]}
